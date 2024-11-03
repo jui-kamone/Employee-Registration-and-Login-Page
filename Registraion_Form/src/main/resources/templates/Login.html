@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Login Form</title>
+
+    <style>
+
+                 body {
+                  background-color: #e1e8f0;
+                  font-size: 0.9rem;
+                }
+                .navbar {
+                  background-color: #1b3b6f;
+                  justify-content: flex-end;
+                }
+                .navbar-brand {
+                  display: none; /* Hide brand name */
+                }
+                .nav-link, .btn-outline-light {
+                  color: #ffffff !important;
+                  font-weight: bold;
+                }
+                .btn-outline-light:hover {
+                  background-color: #142b50;
+                  color: #ffffff !important;
+                }
+                .container {
+                  max-width: 450px;
+                  margin-top: 20px;
+                }
+                .card {
+                  padding: 15px;
+                  border: none;
+                  background-color: #ffffff;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+                .card-body h3 {
+                  color: #1b3b6f;
+                  text-align: center;
+                  font-weight: bold;
+                  font-size: 1.2rem;
+                  margin-bottom: 10px;
+                }
+                .form-group label {
+                  color: #1b3b6f;
+                  font-weight: bold;
+                }
+                .form-control {
+                  padding: 0.3rem 0.5rem;
+                  font-size: 0.85rem;
+                  border: 1px solid #1b3b6f;
+                  background-color: #f4f7fb;
+                }
+                .form-control:focus {
+                  border-color: #142b50;
+                  box-shadow: none;
+                }
+                .btn-primary {
+                  background-color: #1b3b6f;
+                  border-color: #1b3b6f;
+                  color: white;
+                  font-weight: bold;
+                  width: 100%;
+                  padding: 0.4rem;
+                  font-size: 0.85rem;
+                }
+                .btn-primary:hover {
+                  background-color: #142b50;
+                  border-color: #142b50;
+                }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
+            <li class="nav-item">
+<!--                <a href="login" class="btn btn-outline-light my-2 my-sm-0 mr-1">Login</a>-->
+            </li>
+            <li class="nav-item">
+<!--                <a class="btn btn-outline-light my-2 my-sm-0">Signup</a>-->
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container ">
+    <div class="row">
+<!--        <div class="col-md-6 offset-md-3">-->
+        <div class="col-md-10 offset-md-1">
+            <div class="card-body"></div>
+            <h3 class="text-center">Login </h3>
+
+         <div th:if="${param.logout}">
+             <h5 class="text-center text-success">Logout Successfully</h5>
+         </div>
+
+            <div th:if="${param.error}">
+                <h5 class="text-center text-success">InValid username and password</h5>
+            </div>
+
+
+
+            <form th:action="@{/dologin}"  method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password"  placeholder="Password" >
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

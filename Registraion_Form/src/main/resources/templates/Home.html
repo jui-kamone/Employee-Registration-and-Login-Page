@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" crossorigin="anonymous">
+    <title>User Details</title>
+    <style>
+        body {
+          background-color: #e1e8f0;
+        }
+        .container {
+          max-width: 900px;
+          margin-top: 50px;
+          margin-bottom:50px;
+        }
+        .card {
+          border: none;
+          background-color: #ffffff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card-body h2 {
+          color: #1b3b6f;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        table {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    background-color: #f4f7fb;
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: auto;
+}
+        th, td {
+          padding: 12px;
+          text-align: center;
+        }
+        th {
+          background-color: #1b3b6f;
+          color: #ffffff;
+        }
+        tr:nth-child(even) {
+          background-color: #d6e1f1;
+        }
+        tr:nth-child(odd) {
+          background-color: #e8f0fa;
+        }
+        .logout-btn {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          text-align: center;
+          background-color: #1b3b6f;
+          color: white;
+          font-weight: bold;
+          border-radius: 8px;
+          text-decoration: none;
+          margin-top: 20px;
+        }
+        .logout-btn:hover {
+          background-color: #142b50;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+
+            <h1>Welcome, <span th:text="${fullname}">User</span>!</h1>
+
+
+            <h2>User List</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>city</th>
+                    <th>state</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+
+                </tr>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.fullname}"></td>
+                    <td th:text="${user.email}"></td>
+                    <td th:text="${user.address}"></td>
+                    <td th:text="${user.city}"></td>
+                    <td th:text="${user.state}"></td>
+                    <td th:text="${user.gender}"></td>
+                    <td th:text="${user.dateofbirth}"></td>
+
+
+                </tr>
+            </table>
+
+
+            <a th:href="@{/logout}" class="logout-btn">Logout</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
