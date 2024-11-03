@@ -27,7 +27,7 @@ public class HomeController {
     public String home(Principal p, Model m) {
 
         String em = p.getName();
-        User u = repo.findByEmail(em);
+        User u = repo.findByEmail(email);
 
             m.addAttribute("fullname", u.getFullname());
             m.addAttribute("email", u.getEmail());
