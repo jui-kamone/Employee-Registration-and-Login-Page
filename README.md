@@ -25,10 +25,14 @@ To ensure smooth login and registration:
 Password Encoding: The application uses BCryptPasswordEncoder for secure password encryption.
 
 ### Usage
-Home Page: Displays all registered users (restricted to authenticated users).
-Registration Page: New users can register themselves.
-Login Page: Users can log in with their registered email and password.
-Logout: Accessible from the user dashboard for a secure logout.
+#### 1)Home Page:
+Displays all registered users (restricted to authenticated users).
+#### 2)Registration Page:
+New users can register themselves.
+#### 3)Login Page: 
+Users can log in with their registered email and password.
+#### 4)Logout:
+Accessible from the user dashboard for a secure logout.
 
 ### Example Usage
 
