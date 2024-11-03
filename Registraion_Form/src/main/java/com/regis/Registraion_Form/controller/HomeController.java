@@ -30,7 +30,7 @@ public class HomeController {
         User u = repo.findByEmail(em);
 
             m.addAttribute("fullname", u.getFullname());
-            m.addAttribute("em", u.getEmail());
+            m.addAttribute("email", u.getEmail());
 
         List<User> users = customUserService.getAllUsers();
         m.addAttribute("users", users);
