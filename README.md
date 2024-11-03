@@ -3,6 +3,14 @@
 
 This is a Spring Boot application designed to manage employee registration and display user details in a user-friendly web interface. The application includes secure login and registration functionality, user role-based access, and customizable UI.
 
+## Table of Contents
+- [Features](###features)
+- [Configuration](###configuration)
+- [Usage](###usage)
+- [Example Usage](###example-usage)
+
+
+
 ### Features
 User Registration: Users can register with unique credentials.
 Login/Logout System: Secure login and logout features with encrypted passwords.
@@ -24,10 +32,20 @@ Logout: Accessible from the user dashboard for a secure logout.
 
 ### Example Usage
 
-#### Register a New User: ![1  Registration Page](https://github.com/user-attachments/assets/c5056b14-2a88-45ed-a913-0c9d9f71eaa1)
+#### Register a New User:
 
-#### Login: Log in using registered credentials.![2  Log In Page](https://github.com/user-attachments/assets/0fa5bfc0-469e-430e-8f40-15940923b85e)
+![1  Registration Page](https://github.com/user-attachments/assets/c5056b14-2a88-45ed-a913-0c9d9f71eaa1)
 
-#### View User Home Page: After login, see all registered users in the system. ![3  Welcome Page,( List Of All Users Registered)](https://github.com/user-attachments/assets/c6964998-8594-4484-a279-ebc32483d702)
+#### Login: Log in using registered credentials.
 
-#### Database : ![4  Database Page(List Of All Users Registered)](https://github.com/user-attachments/assets/470e7ed8-559d-4ae4-83b6-d4de1fed764a)
+![2  Log In Page](https://github.com/user-attachments/assets/0fa5bfc0-469e-430e-8f40-15940923b85e)
+
+#### View User Home Page: After login, see all registered users in the system. 
+
+![3  Welcome Page,( List Of All Users Registered)](https://github.com/user-attachments/assets/c6964998-8594-4484-a279-ebc32483d702)
+
+
+#### Database :
+
+![4  Database Page(List Of All Users Registered)](https://github.com/user-attachments/assets/470e7ed8-559d-4ae4-83b6-d4de1fed764a)
+
