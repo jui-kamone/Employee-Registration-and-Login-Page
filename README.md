@@ -21,7 +21,8 @@ Database Support: Stores user data in MySQL.
 ### Configuration
 To ensure smooth login and registration:
 
-### User Roles: Users with the role USER can access /user/home. Ensure users are assigned this role during registration.
+### User Roles:
+Users with the role USER can access /user/home. Ensure users are assigned this role during registration.
 Password Encoding: The application uses BCryptPasswordEncoder for secure password encryption.
 
 ### Usage
